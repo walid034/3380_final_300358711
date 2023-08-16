@@ -12,7 +12,7 @@ function BookList() {
 
 function getAllBooks(){
   axios
-  .get('http://localhost:5000/')
+  .get('https://walid-finalexam-backend.onrender.com/')
   .then((res) => {
     setBooks(res.data);
   })
@@ -24,7 +24,7 @@ function getAllBooks(){
       console.log(id)
 
       axios
-      .delete(`http://localhost:5000/${id}`)
+      .delete(`https://walid-finalexam-backend.onrender.com/${id}`)
       .then((res) => {
         getAllBooks()
         console.log(res.data)
